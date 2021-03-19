@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			&nbsp;
+		</div>
+		<div class="row">
+			<h1 class="mx-auto">Encode text</h1>
+		</div>
+		<div class="row">
+			<div class="col" align="center">
+				<textarea id="text" onkeyup="createImageFromText()" cols="100" rows="10" class="mx-auto"></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="mx-auto">Right click and save the following image</div>
+		</div>
+		<div class="row">
+			<div class="col" align="center">
+				<canvas id='textCanvas'></canvas>
+			</div>
+		</div>
+		<div class="row">
+			<h1 class="mx-auto">Decode image</h1>
+		</div>
+		<div class="row">
+			<div  class="col" align="center">
+				<input type="file" id="img" name="img" accept="image/x-png" onchange="createTextFromImage()">
+			</div>
+		</div>
+		<div class="row">
+			<div  class="col" align="center">
+				<canvas id='imageCanvas'></canvas>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+
+var _0x16fd=["\x20\x30\x31\x32\x33\x34\x35\x36\x37\x38\x39\x61\x62\x63\x64\x65\x66\x67\x68\x69\x6A\x6B\x6C\x6D\x6E\x6F\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7A\x41\x42\x43\x44\x45\x46\x47\x48\x49\x4A\x4B\x4C\x4D\x4E\x4F\x50\x51\x52\x53\x54\x55\x56\x57\x58\x59\x5A\x5F\x2D\x3D\x2B\x2F","\x69\x6E\x64\x65\x78\x4F\x66","\x63\x68\x61\x72\x41\x74","\x74\x65\x78\x74\x43\x61\x6E\x76\x61\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x32\x64","\x67\x65\x74\x43\x6F\x6E\x74\x65\x78\x74","\x77\x69\x64\x74\x68","\x68\x65\x69\x67\x68\x74","\x63\x6C\x65\x61\x72\x52\x65\x63\x74","\x76\x61\x6C\x75\x65","\x74\x65\x78\x74","\x65\x6E\x63\x6F\x64\x65\x64\x54\x65\x78\x74\x20\x62\x36\x34\x3A\x20","\x6C\x6F\x67","\x6C\x65\x6E\x67\x74\x68","\x73\x71\x72\x74","\x63\x65\x69\x6C","\x63\x72\x65\x61\x74\x65\x49\x6D\x61\x67\x65\x44\x61\x74\x61","\x64\x61\x74\x61","\x72\x61\x6E\x64\x6F\x6D","\x70\x75\x74\x49\x6D\x61\x67\x65\x44\x61\x74\x61","\x69\x6D\x61\x67\x65\x2F\x70\x6E\x67","\x74\x6F\x44\x61\x74\x61\x55\x52\x4C","\x73\x72\x63","\x66\x69\x6C\x65\x73","\x69\x6E\x70\x75\x74\x5B\x74\x79\x70\x65\x3D\x66\x69\x6C\x65\x5D","\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72","\x72\x65\x61\x64\x41\x73\x44\x61\x74\x61\x55\x52\x4C","\x6F\x6E\x6C\x6F\x61\x64\x65\x6E\x64","\x72\x65\x73\x75\x6C\x74","\x2C","\x73\x6C\x69\x63\x65","\x6F\x6E\x6C\x6F\x61\x64","\x64\x72\x61\x77\x49\x6D\x61\x67\x65","\x67\x65\x74\x49\x6D\x61\x67\x65\x44\x61\x74\x61","\x61\x66\x74\x65\x72\x3A\x20","\x20","","\x74\x65\x78\x74\x6F\x43\x6F\x64\x69\x66\x69\x63\x61\x64\x6F\x20","\x64\x65\x63\x6F\x64\x65\x64\x54\x65\x78\x74\x20"];function base64_to_base10(str){var order=_0x16fd[0];return order[_0x16fd[1]](str)}function base10_to_base64(str){var order=_0x16fd[0];return order[_0x16fd[2]](str)}function utf2b64(str){return btoa(str)}function b642utf(str){return atob(str)}function createImageFromText(){var canvas1=document[_0x16fd[4]](_0x16fd[3]);var context=canvas1[_0x16fd[6]](_0x16fd[5]);context[_0x16fd[9]](0,0,canvas1[_0x16fd[7]],canvas1[_0x16fd[8]]);var text=document[_0x16fd[4]](_0x16fd[11])[_0x16fd[10]];var encodedText=utf2b64(text);console[_0x16fd[13]](_0x16fd[12]+ encodedText);var textLength=encodedText[_0x16fd[14]];var width=Math[_0x16fd[16]](Math[_0x16fd[15]](textLength));var height=Math[_0x16fd[16]](Math[_0x16fd[15]](textLength));var imageData=context[_0x16fd[17]](width,height);var data=imageData[_0x16fd[18]];var base10;for(var i=0;i< (width* height);i++){base10= i< textLength?base64_to_base10(encodedText[i]):0;data[i* 4+ 0]= base10;data[i* 4+ 1]= Math[_0x16fd[19]]()* 255;data[i* 4+ 2]= Math[_0x16fd[19]]()* 255;data[i* 4+ 3]= 255};console[_0x16fd[13]](data);context[_0x16fd[20]](imageData,0,0);var png=canvas1[_0x16fd[22]](_0x16fd[21]);var image= new Image();image[_0x16fd[23]]= png}function createTextFromImage(){var file=document[_0x16fd[26]](_0x16fd[25])[_0x16fd[24]][0];var reader= new FileReader();var imgBase64;reader[_0x16fd[27]](file);reader[_0x16fd[28]]= function(frEvent){var img=reader[_0x16fd[29]];var indice=img[_0x16fd[1]](_0x16fd[30])+ 1;imgBase64= img[_0x16fd[31]](indice);var canvas1=document[_0x16fd[4]](_0x16fd[3]);var context=canvas1[_0x16fd[6]](_0x16fd[5]);context[_0x16fd[9]](0,0,canvas1[_0x16fd[7]],canvas1[_0x16fd[8]]);var image= new Image();image[_0x16fd[23]]= img;image[_0x16fd[32]]= function(){context[_0x16fd[33]](image,0,0);const imgData2=context[_0x16fd[34]](0,0,image[_0x16fd[7]],image[_0x16fd[8]]);const pixels=imgData2[_0x16fd[18]];console[_0x16fd[13]](_0x16fd[35]+ pixels[_0x16fd[14]]+ _0x16fd[36]+ pixels);console[_0x16fd[13]](image);var textoCodificado=_0x16fd[37];for(var i=0;i< pixels[_0x16fd[14]]/ 4;i++){if(pixels[i* 4]!= 0){base64= base10_to_base64(pixels[i* 4]);textoCodificado+= base64}};console[_0x16fd[13]](_0x16fd[38]+ textoCodificado);var decodedText=b642utf(textoCodificado);console[_0x16fd[13]](_0x16fd[39]+ decodedText);document[_0x16fd[4]](_0x16fd[11])[_0x16fd[10]]= decodedText}}}
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
